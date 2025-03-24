@@ -9,9 +9,9 @@ class Solution(object):
         for i in range(-1, -max_length - 1, -1):  # 문자열을 오른쪽에서 왼쪽으로 탐색
             element_a = 0
             element_b = 0
-            if abs(i) <= abs(len_a):
+            if abs(i) <= len_a:
                 element_a = a[i]  # a 위치의 문자열값을 가져온다.
-            if abs(i) <= abs(len_b):
+            if abs(i) <= len_b:
                 element_b = b[i]  # b 위치의 문자열값을 가져온다.
             # 문자열 a와 b의 값과 carry를 더한다.
             add = int(element_a) + int(element_b) + int(carry)

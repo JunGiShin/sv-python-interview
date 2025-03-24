@@ -14,9 +14,9 @@ class Solution:
 
         res = ""
 
-        # 이제 스택에 남은 것은 중복된 괄호이므로 삭제해야 한다.
+        # 이제 스택에 남은 것은 중복된(짝이 없는) 괄호이므로 삭제해야 한다.
         for i in range(len(s)):
-            if stk and i == stk[0]:  # 중복된 괄호가 있고 종류가 같다면
+            if stk and i == stk[0]:  # 현재 인덱스가 제거해야 할 인덱스라면
                 stk.popleft()  # 가장 앞의 원소가 삭제된다.
             else:
                 res += s[i]

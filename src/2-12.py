@@ -11,21 +11,16 @@ def printArray(stream, n):
 
 # Array [0..n-1]에서 k개의 원소를 무작위로 추출하는 함수 구현
 def selectKItems(stream, n, k):
-    i = 0
-    # reservoir[]는 stream[]의 k개 원소 길이의 0으로 초기화된 배열
-    reservoir = [0] * k
-    for i in range(k):
-        reservoir[i] = stream[i]
-
-        # (k + 1)번째 원소부터 n번째 원소까지 반복한다.
-        while i < n:
-            # 0부터 i까지의 원소 중 임의의 인덱스를 선택한다.
-            j = random.randrange(i + 1)
-            # 무작위로 선택한 인덱스가 k보다 작으면 인덱스의 원소를 stream의 새 원소로 바꿈
-            if j < k:
-                reservoir[j] = stream[i]
-            i += 1
-        print("Following are k randomly selected items")
+    # 초기 단계: 처음 k개의 항목을 reservoir에 저장
+    reservoir = [stream[i] for i in range(k)]
+    
+    # 이후 항목들 처리: k번째부터 n-1번째 항목까지
+    for i in range(k, n):
+        j = random.randrange(i + 1)
+        if j < k:
+            reservoir[j] = stream[i]
+    
+    print("Following are k randomly selected items")
     printArray(reservoir, k)
     
 # main 함수
