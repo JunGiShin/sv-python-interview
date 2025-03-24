@@ -8,14 +8,14 @@ class SegmentTreeNode:
 
 
 class Solution:
-    def _bulid(self, left, right):
+    def _build(self, left, right):
         root = SegmentTreeNode(self.cumsum[left], self.cumsum[right])
         if left == right:
             return root
 
         mid = (left + right) // 2
-        root.left = self._bulid(left, mid)
-        root.right = self._bulid(mid + 1, right)
+        root.left = self._build(left, mid)
+        root.right = self._build(mid + 1, right)
         return root
 
     def _print(self, root):
@@ -48,7 +48,7 @@ class Solution:
             cumsum.append(cumsum[-1] + n)
 
         self.cumsum = sorted(list(set(cumsum)))
-        root = self._bulid(0, len(self.cumsum) - 1)
+        root = self._build(0, len(self.cumsum) - 1)
         self._print(root)
         res = 0
         for csum in cumsum:

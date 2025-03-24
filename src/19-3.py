@@ -7,14 +7,14 @@ def chain_from_add(self, word, all_words, chain_length, cache):
     for i in range(len(word) + 1):
         # 각 글자 추가
         for a in string.ascii_lowercase:
-        new_word = word[:i] + a + word[i:]
-        # 현재 생성된 단어가 사전에 있는지 확인
-        if new_word in all_words:
-            # 깊이 탐색
-            current_chain_length = self.chain_from_add(
-                new_word, all_words, chain_length + 1, cache)
-        if current_chain_length > max_chain_length:
-            max_chain_length = current_chain_length
+            new_word = word[:i] + a + word[i:]
+            # 현재 생성된 단어가 사전에 있는지 확인
+            if new_word in all_words:
+                # 깊이 탐색
+                current_chain_length = self.chain_from_add(
+                    new_word, all_words, chain_length + 1, cache)
+            if current_chain_length > max_chain_length:
+                max_chain_length = current_chain_length
 
     cache[word] = max_chain_length
     return cache[word]

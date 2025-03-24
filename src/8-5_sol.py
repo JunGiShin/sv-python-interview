@@ -1,5 +1,4 @@
 class Solution:
-    # Node 클래스는 이미 작성되었다고 가정한다.
     def copyRandomList(self, head: 'Optional[Node]') -> 'Optional[Node]':
         if not head:
             return None
