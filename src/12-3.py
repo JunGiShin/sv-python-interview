@@ -20,6 +20,8 @@ class ConferenceBooking:
                 low = mid - 1
             else:
                 return False
+            if low < 0:
+                return False
         self.schedules.insert(low, event)
         return True
 
