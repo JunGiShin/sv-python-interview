@@ -1,6 +1,6 @@
 class Solution:
     # @param {int} n，1개의 정수
-    # @param {int[][]} edges，무향 그래프
+    # @param {int[][]} edges，무방향 그래프
     # @return {boolean} 유효한 트리이면 True를 반환하고, 그렇지 않으면 False를 반환한다.
     def validTree(self, n, edges):
         root = [i for i in range(n)]  # 각 노드의 상위 노드를 초기화한다.

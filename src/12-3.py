@@ -26,7 +26,7 @@ class ConferenceBooking:
 
 if __name__ == "__main__":
     solution = ConferenceBooking()
-
+    
     event1 = Event(10, 20)
     res = solution.booking(event1)
     assert res == True
