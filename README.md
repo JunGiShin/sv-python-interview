@@ -13,7 +13,7 @@
 코드를 로컬 환경에 설치하지 않고도 쉽게 실행할 수 있습니다. 아래의 옵션을 이용해 실행할 수 있습니다:
 
 - **Google Colab**을 이용한 실행:
-  [**Open In Colab**](https://colab.research.google.com)  
+  [**Open In Colab**](https://colab.research.google.com/drive/1pKFtIIEq5JSSML3m_NukyAMWvYYHW4vu?usp=sharing)  
   Google Colab은 웹 기반으로 Python 코드를 실행할 수 있는 환경을 제공합니다. 인터넷만 있으면 어떤 컴퓨터에서든 실행할 수 있습니다.  
 
 ### 2. 로컬에서 실행하려면
